@@ -1,12 +1,39 @@
+h1.title {
+    /* Force the heavy Barlow Black weight */
+    font-family: 'Barlow', sans-serif !important;
+    font-weight: 900 !important; 
+    
+    /* Slightly smaller than before so the longer words fit */
+    font-size: 5rem !important; 
+    
+    /* The Atari "Squeeze" */
+    letter-spacing: -4px !important; 
+    line-height: 0.85 !important;
+    
+    /* Industrial styling */
+    color: #ffffff !important;
+    text-transform: uppercase !important;
+    text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    
+    /* Subtle shadow for depth */
+    text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive fix for mobile so the text doesn't break */
+@media screen and (max-width: 768px) {
+    h1.title {
+        font-size: 2.5rem !important;
+        letter-spacing: -1px !important;
+    }
+}
+
 .cassette-container {
     position: relative;
     width: 500px; /* Adjust to your image size */
 }
 
-.cassette-img {
-    width: 100%;
-    display: block;
-}
 
 .display-screen {
     position: absolute;
@@ -18,6 +45,18 @@
     color: #333;
 }
 
+.button.is-arc-yellow {
+    background-color: #F8C300 !important; /* The classic ARC Raiders Yellow */
+    color: #000000 !important;           /* Black text for high contrast */
+    border: none;
+    font-weight: 700;
+}
+
+.button.is-arc-yellow:hover {
+    background-color: #e6b500 !important; /* Slightly darker on hover */
+    color: #000000 !important;
+}
+
 .tape-button {
     position: absolute;
     bottom: 10%;
@@ -27,3 +66,45 @@
     background: rgba(255, 255, 255, 0.5); 
 }
 
+/* Update your CSS file */
+
+.button, .title, #api-display {
+    font-family: 'JetBrains Mono', monospace !important;
+    letter-spacing: 0.5px;
+}
+
+#jokeButton, #speakButton {
+    text-transform: uppercase;
+    font-weight: 700; /* Bold weight */
+    border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Subtle "Tactile" hover effect for the hardware feel */
+.button:hover {
+    filter: brightness(1.2);
+    transform: translateY(-1px);
+}
+
+/* --- Terminal Screen Styles --- */
+#api-display {
+    /* Using JetBrains Mono from your proposal */
+    font-family: 'JetBrains Mono', monospace; 
+    
+    /* The "Screen" Look */
+    background-color: rgba(0, 0, 0, 0.85); 
+    color: #00d1b2; /* Bulma's primary turquoise/cyan */
+    
+    /* Layout and Spacing */
+    padding: 2rem;
+    border: 2px solid #333;
+    border-radius: 4px;
+    min-height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    
+    /* CRT/Hardware effects */
+    box-shadow: inset 0 0 15px rgba(0, 209, 178, 0.2);
+    text-shadow: 0 0 5px rgba(0, 209, 178, 0.5);
+}

@@ -24,4 +24,24 @@ jokeBtn.addEventListener('click', () => {
         jokeBtn.classList.remove('is-loading');
         console.error('Fetch error:', error);
     });
+    const speakBtn = document.getElementById('speakButton');
+
+// Function to read the joke aloud
+const playJokeAudio = () => {
+    const textToRead = display.innerText;
+
+    // Check if there is a joke to read and if the browser is currently speaking
+    if (textToRead && !window.speechSynthesis.speaking) {
+        const utterance = new SpeechSynthesisUtterance(textToRead);
+        
+        // Optional: Customize the voice
+        utterance.pitch = 1;  // Range 0 to 2
+        utterance.rate = 0.9;   // Range 0.1 to 10 (0.9 is a nice natural pace)
+        
+        window.speechSynthesis.speak(utterance);
+    }
+};
+
+// Listen for the click on the new button
+speakBtn.addEventListener('click', playJokeAudio);
 });
