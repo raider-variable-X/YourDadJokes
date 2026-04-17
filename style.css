@@ -57,14 +57,7 @@ h1.title {
     color: #000000 !important;
 }
 
-.tape-button {
-    position: absolute;
-    bottom: 10%;
-    left: 45%;
-    cursor: pointer;
-    /* You can make this transparent if the image already has buttons */
-    background: rgba(255, 255, 255, 0.5); 
-}
+
 
 /* Update your CSS file */
 
