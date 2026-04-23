@@ -58,7 +58,6 @@ h1.title {
 }
 
 
-
 /* Update your CSS file */
 
 .button, .title, #api-display {
@@ -100,4 +99,38 @@ h1.title {
     /* CRT/Hardware effects */
     box-shadow: inset 0 0 15px rgba(0, 209, 178, 0.2);
     text-shadow: 0 0 5px rgba(0, 209, 178, 0.5);
+}
+
+/* --- Atari Corner Streaks --- */
+.atari-corner {
+    position: fixed;
+    bottom: -40px;
+    right: -60px;
+    width: 400px;
+    transform: rotate(-45deg);
+    z-index: -1;
+    display: flex;
+    flex-direction: column;
+    pointer-events: none; /* So it doesn't interfere with clicks */
+}
+
+.streak {
+    height: 18px;
+    width: 100%;
+}
+
+.red { background-color: #e41c2c; }
+.orange { background-color: #f26522; }
+.yellow { background-color: #ffcd03; }
+
+/* Styling for the new Copy Button to match your existing buttons */
+#copyButton {
+    font-family: 'JetBrains Mono', monospace !important;
+    text-transform: uppercase;
+    transition: all 0.2s ease;
+}
+
+#copyButton:hover {
+    filter: brightness(1.2);
+    transform: translateY(-2px);
 }

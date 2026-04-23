@@ -22,6 +22,6 @@ This project is an unserious way for users to find entertainment quickly while t
 
 ## How to Visit My Project
 You can access the GitHub repository here: 
-[View YourDadJokes Repo](https://github.com/raider-variable-X/YourDadJokes)
+[View YourDadJokes Repo](https://github.com/raider-variable-X/YourDadJokes/)
 You can access the live joke generator here:
 [View YourDadJokes](https://raider-variable-x.github.io/YourDadJokes/)

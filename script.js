@@ -45,3 +45,25 @@ const playJokeAudio = () => {
 // Listen for the click on the new button
 speakBtn.addEventListener('click', playJokeAudio);
 });
+
+const copyBtn = document.getElementById('copyButton');
+
+copyBtn.addEventListener('click', () => {
+    // Get the text currently inside your joke display
+    const textToCopy = display.innerText;
+
+    // Prevent copying the placeholder text
+    if (textToCopy && textToCopy !== "Click the button to hear a joke!" && textToCopy !== "Loading tape...") {
+        navigator.clipboard.writeText(textToCopy).then(() => {
+            // Visual feedback
+            const originalText = copyBtn.innerHTML;
+            copyBtn.innerHTML = "✅ COPIED_";
+            copyBtn.classList.replace('is-info', 'is-success');
+
+            setTimeout(() => {
+                copyBtn.innerHTML = originalText;
+                copyBtn.classList.replace('is-success', 'is-info');
+            }, 2000);
+        });
+    }
+});
