@@ -20,6 +20,11 @@ This project is an unserious way for users to find entertainment quickly while t
 
 --- 
 
+## What changed from Project 01 to Project 02?
+I was able to turn a basic prototype of a joke generator into a more robust product. I added a COPY_LOG and AUDIO_ feature. I updated the UI from a tri-color streak headlining the page to orienting the buttons to stack properly and a 70's Dymo styled label. 
+
+---
+
 ## How to Visit My Project
 You can access the GitHub repository here: 
 [View YourDadJokes Repo](https://github.com/raider-variable-X/YourDadJokes/)

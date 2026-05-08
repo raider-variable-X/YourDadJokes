@@ -65,6 +65,10 @@ h1.title {
     letter-spacing: 0.5px;
 }
 
+#jokeButton {
+    margin-bottom: 3.5rem !important;
+}
+
 #jokeButton, #speakButton {
     text-transform: uppercase;
     font-weight: 700; /* Bold weight */
@@ -78,6 +82,7 @@ h1.title {
 }
 
 /* --- Terminal Screen Styles --- */
+
 #api-display {
     /* Using JetBrains Mono from your proposal */
     font-family: 'JetBrains Mono', monospace; 
@@ -101,29 +106,55 @@ h1.title {
     text-shadow: 0 0 5px rgba(0, 209, 178, 0.5);
 }
 
-/* --- Atari Corner Streaks --- */
-.atari-corner {
-    position: fixed;
-    bottom: -40px;
-    right: -60px;
-    width: 400px;
-    transform: rotate(-45deg);
-    z-index: -1;
+
+/* --- Atari Divider --- */
+.atari-divider {
+    width: 100%;
+    margin: 0 auto 3rem auto;
     display: flex;
-    flex-direction: column;
-    pointer-events: none; /* So it doesn't interfere with clicks */
+    flex-direction: column; 
 }
 
 .streak {
-    height: 18px;
-    width: 100%;
+    height:6px;
+    width:100%;
 }
+
+
 
 .red { background-color: #e41c2c; }
 .orange { background-color: #f26522; }
 .yellow { background-color: #ffcd03; }
 
-/* Styling for the new Copy Button to match your existing buttons */
+.status-light-container {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 0.7rem;
+    color: #00d1b2; /* Matches your terminal cyan */
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.led {
+    width: 8px;
+    height: 8px;
+    background-color: #00d1b2;
+    border-radius: 50%;
+    box-shadow: 0 0 5px #00d1b2;
+    animation: blink 1.5s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+}
+
+
+
+
+/* Styling for the new Copy Button  */
 #copyButton {
     font-family: 'JetBrains Mono', monospace !important;
     text-transform: uppercase;
@@ -133,4 +164,36 @@ h1.title {
 #copyButton:hover {
     filter: brightness(1.2);
     transform: translateY(-2px);
+}
+
+.dymo-label {
+    background: #e41c2c; /* Atari Red */
+    color: white;
+    font-family: 'JetBrains Mono', monospace;
+    font-weight: 900;
+    padding: 2px 8px;
+    text-transform: uppercase;
+    font-size: 0.6rem;
+    border-radius: 2px;
+    box-shadow: 1px 1px 0px #000;
+    display: inline-block;
+    transform: rotate(-1deg); /* Gives it that "hand-applied" look */
+}
+.button-stack {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers buttons horizontally */
+    gap: 1rem;         /* Adds even vertical space between all items */
+    margin-top: 1rem;    /* Space between terminal box and buttons */
+}
+
+#jokeButton {
+    /* Extra margin here satisfies peer feedback about vertical depth */
+    margin-bottom: .5rem !important; 
+}
+
+.dymo-label {
+    margin-top: 1rem;
+    display: inline-block;
+    transform: rotate(-1deg); /* Subtle angle for that 'sticker' look */
 }

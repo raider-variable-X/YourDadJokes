@@ -9,32 +9,29 @@
         <title>Your Dad Jokes</title>
     </head>
     <body>
-        <h1 class="title">YOUR<br> DAD  JOKES!</h1>
-        <section class="section">
-        <div class="container has-text-centered">   
-            <div class="box">
-                <p id="api-display" class="is-size-4">Click the button to hear a joke!</p>
+        <div class="atari-top-bar">
+            <div class="streak red"></div>
+            <div class="streak orange"></div>
+            <div class="streak yellow"></div>
+        </div>
+        <h1 class="title">YOUR<br> DAD JOKES!</h1>
+        
+       <section class="section">
+            <div class="container has-text-centered">
+                
+                <div class="box">
+                    <p id="api-display" class="is-size-4">Click the button to hear a joke!</p>
+                </div>
+
+                <div class="button-stack">
+                    <button id="jokeButton" class="button is-primary is-large">Get_Joke</button>
+                    <button id="speakButton" class="button is-arc-yellow is-large" title="Listen to joke">🔊 AUDIO_</button>     
+                    <button id="copyButton" class="button is-info is-large">📋 COPY_LOG</button>
+                    <div class="dymo-label" href="https://github.com/raider-variable-X">PROPERTY_OF_RAIDER_VARIABLE_X</div>
+                </div>
+
             </div>
-            <button id="jokeButton" class="button is-primary is-large">
-                Get_Joke
-            </button>
-            <p class="control">
-            <button id="speakButton" class="button is-arc-yellow is-large" title="Listen to joke">
-                🔊AUDIO_
-            </button>
-            <button id="copyButton" class="button is-info is-large">
-                📋COPY_LOG
-            </button>
-            </button>
-            </p>
-        </div>
-         </section>
-        </div>
-        <div class="atari-corner">
-            <div class=" streak red"></div>
-            <div class=" streak orange"></div>
-            <div class=" streak yellow"></div>
-        </div>
+        </section>
         <script src="script.js"></script>
     </body>
 </html>
